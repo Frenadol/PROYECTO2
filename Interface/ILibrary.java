@@ -13,6 +13,4 @@ public interface ILibrary {
     public void deleteByID(ID);
     public void update(fav);
     public void deleteByname();
-
-
 }
