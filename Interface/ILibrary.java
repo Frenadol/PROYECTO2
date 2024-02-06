@@ -1,6 +1,8 @@
 package Interface;
 
-public interface ILibrary {
+import Model.Movie;
+
+public interface ILibrary{
 
     public void  addMovie();
     public void addSong();
