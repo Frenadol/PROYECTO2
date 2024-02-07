@@ -29,10 +29,22 @@ public class Library {
     public void deleteByID(Favorite){
 
     }
+    public void deleteAll(){
+
+    }
+    public void deleteByClass(){
+
+    }
+    public void deleteByName(){
+
+    }
     public void update(Favorite){
 
     }
     public void deleteByname(){
+
+    }
+    public void showFav(){
 
     }
 }
