@@ -15,18 +15,21 @@ public class Library {
     public ArrayList<Favorite> findAll() {
         return favorites;
     }
-    public void findByID(){
+    public void findByID(String idFavorite) {
+        for (int i = 0; i < favorites.size(); i++) {
+             idFavorite=
+        }
     }
     public void findByClass(){
 
     }
-    public void findByName(){
+    public void findByName(String name){
 
     }
     public void AddFav(){
 
     }
-    public void deleteByID(Favorite){
+    public void deleteByID(Favorite idFavorite){
 
     }
     public void update(Favorite){

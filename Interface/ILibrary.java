@@ -1,5 +1,7 @@
 package Interface;
 
+import Model.Library;
+
 public interface ILibrary {
 
     public void  addMovie();
@@ -10,7 +12,7 @@ public interface ILibrary {
     public void findByClass();
     public void findByName();
     public void AddFav();
-    public void deleteByID(ID);
+    public void deleteByID(idFavorite);
     public void update(fav);
     public void deleteByname();
 
