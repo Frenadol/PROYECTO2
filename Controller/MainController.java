@@ -88,7 +88,7 @@ public class MainController {
                         }
                         break;
                     case 6:
-                        
+
                         break;
                     case 7:
                         System.out.println("Saliendo de la biblioteca Trenosaurius");
