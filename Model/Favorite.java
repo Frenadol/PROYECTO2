@@ -4,11 +4,13 @@ public class Favorite {
     protected String name;
     protected String category;
     protected String author;
+    protected String idFavorite;
 
-    public Favorite(String name, String category, String author) {
+    public Favorite(String name, String category, String author, String idFavorite) {
         this.name = name;
         this.category = category;
         this.author = author;
+        this.idFavorite = idFavorite;
     }
 
     public String getName() {
@@ -35,12 +37,21 @@ public class Favorite {
         this.author = author;
     }
 
+    public String getIdFavorite() {
+        return idFavorite;
+    }
+
+    public void setIdFavorite(String idFavorite) {
+        this.idFavorite = idFavorite;
+    }
+
     @Override
     public String toString() {
         return "Favorite{" +
                 "name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", author='" + author + '\'' +
+                ", idFavorite='" + idFavorite + '\'' +
                 '}';
     }
 }

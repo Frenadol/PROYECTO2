@@ -3,13 +3,13 @@ package Model;
 public class Movie  extends Favorite{
     protected String ReleaseDate;
 
-    public Movie(String name, String category, String author, String releaseDate) {
-        super(name, category, author);
-        ReleaseDate = releaseDate;
+    public Movie(String name, String category, String author, String idFavorite) {
+        super(name, category, author, idFavorite);
     }
 
-    public Movie(String name, String category, String author) {
-        super(name, category, author);
+    public Movie(String name, String category, String author, String idFavorite, String releaseDate) {
+        super(name, category, author, idFavorite);
+        ReleaseDate = releaseDate;
     }
 
     public String getReleaseDate() {

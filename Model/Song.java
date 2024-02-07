@@ -3,13 +3,13 @@ package Model;
 public class Song extends Favorite{
     protected String duration;
 
-    public Song(String name, String category, String author, String duration) {
-        super(name, category, author);
-        this.duration = duration;
+    public Song(String name, String category, String author, String idFavorite) {
+        super(name, category, author, idFavorite);
     }
 
-    public Song(String name, String category, String author) {
-        super(name, category, author);
+    public Song(String name, String category, String author, String idFavorite, String duration) {
+        super(name, category, author, idFavorite);
+        this.duration = duration;
     }
 
     public String getDuration() {
