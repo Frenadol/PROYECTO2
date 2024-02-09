@@ -12,12 +12,12 @@ public interface ILibrary {
     public void findByClass();
     public void findByName();
     public void AddFav();
-    public void deleteByID(idFavorite);
-    public void update(fav);
+    public void deleteByID();
+    public void update();
     public void deleteByname();
     public void showFav();
     public void deleteAll();
     public void deleteByClass();
     public void deleteByName();
-
+    public void deleteFavoriteById(String idFavorite);
 }

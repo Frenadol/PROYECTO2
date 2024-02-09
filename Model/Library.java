@@ -15,39 +15,60 @@ public class Library {
     public ArrayList<Favorite> findAll() {
         return favorites;
     }
-    public void findByID(String idFavorite) {
-        for (int i = 0; i < favorites.size(); i++) {
-             idFavorite=
+    public Favorite findByID(String idFavorite) {
+        boolean id=true;
+        Favorite favSearched = null;
+        for (int i = 0; i < favorites.size() && id; i++) {
+            if (favorites.get(i).getIdFavorite().equals(idFavorite)) {
+                favSearched = favorites.get(i);
+                break;
+
+            }
+        }
+        return favSearched;
+    }
+    public void findByClass(int optionClass) {
+        for (Favorite favorite : favorites) {
+            if (favorite.getClass()== optionClass) {
+                System.out.println(favorite);
+            }
         }
     }
-    public void findByClass(){
 
+    public void findByName(String name) {
+        for (Favorite favorite : favorites) {
+            if (favorite.getName().equals(name)) {
+                System.out.println(favorite);
+            }
+        }
     }
-    public void findByName(String name){
 
+    public void deleteFavoriteById(String idFavorite) {
+        for (int i = 0; i < favorites.size(); i++) {
+            if (favorites.get(i).getIdFavorite().equals(idFavorite)) {
+                favorites.remove(i);
+                break;
+            }
+        }
     }
-    public void AddFav(){
 
+    public void deleteAllFavorites() {
+        favorites.clear();
     }
-    public void deleteByID(Favorite idFavorite){
 
-    }
-    public void deleteAll(){
+    public void updateFavorite(Favorite favorite) {
+        for (int i = 0; i < favorites.size(); i++) {
+            if (favorites.get(i).getIdFavorite().equals(favorite.getIdFavorite())) {
+                favorites.set(i, favorite);
+                }
 
-    }
-    public void deleteByClass(){
+            }
+        }
 
-    }
-    public void deleteByName(){
 
-    }
-    public void update(Favorite){
-
-    }
-    public void deleteByname(){
-
-    }
-    public void showFav(){
-
+    public void showFavorites() {
+        for (Favorite favorite : favorites) {
+            System.out.println(favorite);
+        }
     }
 }

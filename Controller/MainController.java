@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class MainController {
     public void run() {
         View.Menu.showMenu();
-        int opcion = 0;
+        int option = 0;
         int OptionClass = 0;
 
         Scanner Scanner = new Scanner(System.in);
-        opcion = Scanner.nextInt();
+        option = Scanner.nextInt();
 
-        switch (opcion) {
+        switch (option) {
             case 1:
                 Library.AddFav();
                 break;
