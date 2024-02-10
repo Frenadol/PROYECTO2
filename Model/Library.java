@@ -1,35 +1,45 @@
 package Model;
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.List;
+
 public class Library {
     private ArrayList<Favorite> favorites;
-    public void  addMovie(Movie movie){
+
+    public Library() {
+        favorites = new ArrayList<>();
+    }
+
+    public void addMovie(Movie movie){
         favorites.add((Favorite) movie);
     }
+
     public void addSong(Song song){
         favorites.add((Favorite) song);
     }
+
     public void addGame(Game game){
         favorites.add((Favorite) game);
     }
-    public ArrayList<Favorite> findAll() {
+
+    public List<Favorite> findAll() {
         return favorites;
     }
-    public Favorite findByID(String idFavorite) {
-        boolean id=true;
-        Favorite favSearched = null;
-        for (int i = 0; i < favorites.size() && id; i++) {
-            if (favorites.get(i).getIdFavorite().equals(idFavorite)) {
-                favSearched = favorites.get(i);
-                break;
 
+    public Favorite findByID(String idFavorite) {
+        boolean found = false;
+        Favorite favSearched = null;
+        for (Favorite favorite : favorites) {
+            if (favorite.getIdFavorite().equals(idFavorite) && !found) {
+                favSearched = favorite;
+                found = true;
             }
         }
         return favSearched;
     }
+
     public void findByClass(int optionClass) {
         for (Favorite favorite : favorites) {
-            if (favorite.getClass()== optionClass) {
+            if (getFavoriteClass(favorite) == optionClass) {
                 System.out.println(favorite);
             }
         }
@@ -44,10 +54,11 @@ public class Library {
     }
 
     public void deleteFavoriteById(String idFavorite) {
-        for (int i = 0; i < favorites.size(); i++) {
+        boolean found = false;
+        for (int i = 0; i < favorites.size() && !found; i++) {
             if (favorites.get(i).getIdFavorite().equals(idFavorite)) {
                 favorites.remove(i);
-                break;
+                found = true;
             }
         }
     }
@@ -57,18 +68,29 @@ public class Library {
     }
 
     public void updateFavorite(Favorite favorite) {
-        for (int i = 0; i < favorites.size(); i++) {
+        boolean found = false;
+        for (int i = 0; i < favorites.size() && !found; i++) {
             if (favorites.get(i).getIdFavorite().equals(favorite.getIdFavorite())) {
                 favorites.set(i, favorite);
-                }
-
+                found = true;
             }
         }
-
+    }
 
     public void showFavorites() {
         for (Favorite favorite : favorites) {
             System.out.println(favorite);
         }
+    }
+
+    private int getFavoriteClass(Favorite favorite) {
+        if (favorite instanceof Movie) {
+            return 1;
+        } else if (favorite instanceof Song) {
+            return 2;
+        } else if (favorite instanceof Game) {
+            return 3;
+        }
+        return 0;
     }
 }
