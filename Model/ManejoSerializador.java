@@ -37,5 +37,9 @@ public class ManejoSerializador {
 }
 
 class favorite implements Serializable {
+    private String name;
+    private String category;
+    private String author;
+    private String idFavorite;
 }
-}
+
