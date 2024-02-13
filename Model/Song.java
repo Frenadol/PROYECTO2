@@ -12,6 +12,10 @@ public class Song extends Favorite{
         this.duration = duration;
     }
 
+    public Song() {
+        super("", "", "", "");
+    }
+
     public String getDuration() {
         return duration;
     }

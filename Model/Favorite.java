@@ -13,6 +13,9 @@ public class Favorite {
         this.idFavorite = idFavorite;
     }
 
+    public Favorite() {
+    }
+
     public String getName() {
         return name;
     }

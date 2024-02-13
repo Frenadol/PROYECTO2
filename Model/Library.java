@@ -76,6 +76,21 @@ public class Library {
             }
         }
     }
+    public void deleteByClass(int optionClass) {
+        for (Favorite favorite : favorites) {
+            if (getFavoriteClass(favorite) == optionClass) {
+                favorites.remove(favorite);
+            }
+        }
+    }
+
+    public void deleteByName(String name) {
+        for (Favorite favorite : favorites) {
+            if (favorite.getName().equals(name)) {
+                favorites.remove(favorite);
+            }
+        }
+    }
 
     public void showFavorites() {
         for (Favorite favorite : favorites) {

@@ -37,15 +37,12 @@ public class MainController {
 
                     switch (optionClass) {
                         case 1:
-                            // Llama al método correspondiente de la clase Library para agregar una película
                             library.addMovie(new Movie());
                             break;
                         case 2:
-                            // Llama al método correspondiente de la clase Library para agregar una canción
                             library.addSong(new Song());
                             break;
                         case 3:
-                            // Llama al método correspondiente de la clase Library para agregar un juego
                             library.addGame(new Game());
                             break;
                         default:
@@ -66,22 +63,19 @@ public class MainController {
                             library.findAll();
                             break;
                         case 2:
-                            // Pide al usuario el ID y llama al método correspondiente de la clase Library para buscar por ID
                             System.out.println("Ingrese el ID:");
-                            scanner.nextLine(); // Consumir el salto de línea pendiente
+                            scanner.nextLine();
                             String idSearch = scanner.nextLine();
                             library.findByID(idSearch);
                             break;
                         case 3:
-                            // Pide al usuario la clase y llama al método correspondiente de la clase Library para buscar por clase
                             System.out.println("Ingrese la clase (1: Película, 2: Canción, 3: Juego):");
                             int classSearch = scanner.nextInt();
                             library.findByClass(classSearch);
                             break;
                         case 4:
-                            // Pide al usuario el nombre y llama al método correspondiente de la clase Library para buscar por nombre
                             System.out.println("Ingrese el nombre:");
-                            scanner.nextLine(); // Consumir el salto de línea pendiente
+                            scanner.nextLine();
                             String nameSearch = scanner.nextLine();
                             library.findByName(nameSearch);
                             break;
@@ -103,22 +97,19 @@ public class MainController {
                             library.deleteAllFavorites();
                             break;
                         case 2:
-                            // Pide al usuario el ID y llama al método correspondiente de la clase Library para borrar por ID
                             System.out.println("Ingrese el ID:");
-                            scanner.nextLine(); // Consumir el salto de línea pendiente
+                            scanner.nextLine();
                             String idDelete = scanner.nextLine();
                             library.deleteFavoriteById(idDelete);
                             break;
                         case 3:
-                            // Pide al usuario la clase y llama al método correspondiente de la clase Library para borrar por clase
                             System.out.println("Ingrese la clase (1: Película, 2: Canción, 3: Juego):");
                             int classDelete = scanner.nextInt();
                             library.deleteByClass(classDelete);
                             break;
                         case 4:
-                            // Pide al usuario el nombre y llama al método correspondiente de la clase Library para borrar por nombre
                             System.out.println("Ingrese el nombre:");
-                            scanner.nextLine(); // Consumir el salto de línea pendiente
+                            scanner.nextLine();
                             String nameDelete = scanner.nextLine();
                             library.deleteByName(nameDelete);
                             break;

@@ -11,6 +11,9 @@ public class Game extends Favorite{
         super(name, category, author, idFavorite);
         Platarform = platarform;
     }
+    public Game() {
+        super("", "", "", "");
+    }
 
     public String getPlatarform() {
         return Platarform;

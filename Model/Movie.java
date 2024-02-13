@@ -12,6 +12,10 @@ public class Movie  extends Favorite{
         ReleaseDate = releaseDate;
     }
 
+    public Movie() {
+        super("", "", "", "");
+    }
+
     public String getReleaseDate() {
         return ReleaseDate;
     }
