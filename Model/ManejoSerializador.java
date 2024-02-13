@@ -7,16 +7,10 @@ public class ManejoSerializador {
 
     public static void main(String[] args) {
         ArrayList<favorite> miArrayList = new ArrayList<>();
-        // Agrega elementos a tu ArrayList
 
-        // Serializar
         serializarArrayList(miArrayList, "archivo_serializado.ser");
 
-        // Deserializar
         ArrayList<favorite> miArrayListDeserializado = deserializarArrayList("archivo_serializado.ser");
-
-        // Ahora puedes usar el ArrayList deserializado
-        // ...
     }
 
     private static void serializarArrayList(ArrayList<favorite> lista, String nombreArchivo) {
@@ -42,8 +36,6 @@ public class ManejoSerializador {
     }
 }
 
-// Clase que implementa Serializable
 class favorite implements Serializable {
-    // Atributos y métodos de la clase
 }
 }
